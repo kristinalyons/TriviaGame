@@ -1,112 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Turkey Day Trivia</title>
-	<!-- Added link to the jQuery Library -->
-	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>Turkey Day Trivia</title>
+  <!-- Added link to the jQuery Library -->
+  
 
-	<!-- Added a link to Bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
-	<!-- Added a link to CSS file-->
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Miltonian" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Added a link to CSS file-->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Miltonian" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-</head>
-<body>
 
-	<div class="container text-center">
-		<div class="row">
-			<h1 class="title">Turkey Day Trivia</h1>
-		</div>
-		<div class="row">
-			<h3 class="timeRemaining">Time Remaining: <span id=secondsRemaining></span></h3>
-		</div>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">Which President was the first to establish Thanksgiving as a legal holiday to be held the 4th Thursday in November? </h3>
-		</div>
-		<form id="president">
-			<div class="radio">
-				<label class="radio-inline" id="presJFK"><input type="radio" name="optradio">John F. Kennedy</label>
-				<label class="radio-inline" id="presGW"><input type="radio" name="optradio">George Washington</label>
-				<label class="radio-inline" id="presTR"><input type="radio" name="optradio">Theodore Roosevelt</label>
-				<label class="radio-inline" id="presAL"><input type="radio" name="optradio">Abraham Lincoln</label>
-			</div>
-		</form>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">The first department store to hold a Thanksgiving parade was: </h3>
-		</div>
-		<form id="deptStore">
-			<div class="radio">
-				<label class="radio-inline"><input type="radio" name="optradio">Montgomery Ward</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Macy's</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Gimbels</label>
-				<label class="radio-inline"><input type="radio" name="optradio">J.C. Penney</label>
-			</div>
-		</form>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">In what year did the first Macy's Thanksgiving parade take place: </h3>
-		</div>
-		<form id="Macys">
-			<div class="radio">
-				<label class="radio-inline"><input type="radio" name="optradio">1933</label>
-				<label class="radio-inline"><input type="radio" name="optradio">1928</label>
-				<label class="radio-inline"><input type="radio" name="optradio">1924</label>
-				<label class="radio-inline"><input type="radio" name="optradio">1941</label>
-			</div>
-		</form>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">The Indians who were invited to the Thanksgiving feast were of the Wampanoag tribe. Who was their chief? </h3>
-		</div>
-		<form id="indianChief">
-			<div class="radio">
-				<label class="radio-inline"><input type="radio" name="optradio">Massasoit</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Pemaquid</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Samoset</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Squanto</label>
-			</div>
-		</form>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">What was the name of the ship on which the pilgrims came over? </div>
-		</h3>
-		<form id="ship">
-			<div class="radio">
-				<label class="radio-inline"><input type="radio" name="optradio">Nina</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Pinta</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Mayflower</label>
-				<label class="radio-inline"><input type="radio" name="optradio">Carnival Sensation</label>
-			</div>
-		</form>
-		<br>
-		<br>
-		<div class="row">
-			<h3 class="questions">How many turkeys are consumed each year on Thanksgiving? </div>
-		</h3>
-		<form id="turkeys">
-			<div class="radio">
-				<label class="radio-inline"><input type="radio" name="optradio">8 million</label>
-				<label class="radio-inline"><input type="radio" name="optradio">15 million</label>
-				<label class="radio-inline"><input type="radio" name="optradio">33 million</label>
-				<label class="radio-inline"><input type="radio" name="optradio">46 million</label>
-			</div>
-		</form>
+  <div class="container">
+    <div class="row">
+      <div class="panel-body text-center">
+        <h1 class="title">It's Turkey Day Trivia!</h1>
+        <div class="row text-center">
+          <button id="start" class="btn btn-default btn-lg text-center"><h3>Start</h3></button>         
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<h2 class="results">Correct Answers: <span id="correct"></span></h2>
-		<h2 class="results">Incorrect Answers: <span id="incorrect"></span></h2>
-		<h2 class="results">Unanswered Questions: <span id="unanswered"></span></h2>
-	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-</body>
-</html>
+  <div class="container text-center" id="pageTwo">
+    <h1 class="title">Turkey Day Trivia</h1>    
+    <div class="row">
+      <h3 class="timeRemaining">Time Remaining:</h3>
+    </div>
+    <div id="row">
+      <div id="display">00:60</div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+      <h3 class="questions">Which President was the first to establish Thanksgiving as a legal holiday to be held the 4th Thursday in November? </h3>
+    </div>
+    <form id="president">
+      <div class="radio">
+        <label class="radio-inline" id="presJFK"><input type="radio" name="optradio">John F. Kennedy</label>
+        <label class="radio-inline" id="presGW"><input type="radio" name="optradio">George Washington</label>
+        <label class="radio-inline" id="presTR"><input type="radio" name="optradio">Theodore Roosevelt</label>
+        <label class="radio-inline" id="presAL"><input type="radio" name="optradio">Abraham Lincoln</label>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div class="row">
+      <h3 class="questions">The first department store to hold a Thanksgiving parade was: </h3>
+    </div>
+    <form id="deptStore">
+      <div class="radio">
+        <label class="radio-inline" id="monWard"><input type="radio" name="optradio">Montgomery Ward</label>
+        <label class="radio-inline" id="macys"><input type="radio" name="optradio">Macy's</label>
+        <label class="radio-inline" id="gimbels"><input type="radio" name="optradio">Gimbels</label>
+        <label class="radio-inline" id="jcPenney"><input type="radio" name="optradio">J.C. Penney</label>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div class="row">
+      <h3 class="questions">In what year did the first Macy's Thanksgiving parade take place: </h3>
+    </div>
+    <form id="macysParade">
+      <div class="radio">
+        <label class="radio-inline" id="1933"><input type="radio" name="optradio">1933</label>
+        <label class="radio-inline" id="1928"><input type="radio" name="optradio">1928</label>
+        <label class="radio-inline" id="1924"><input type="radio" name="optradio">1924</label>
+        <label class="radio-inline" id="1941"><input type="radio" name="optradio">1941</label>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div class="row">
+      <h3 class="questions">The Indians who were invited to the Thanksgiving feast were of the Wampanoag tribe. Who was their chief? </h3>
+    </div>
+    <form id="indianChief">
+      <div class="radio">
+        <label class="radio-inline" id="massasoit"><input type="radio" name="optradio">Massasoit</label>
+        <label class="radio-inline" id="pemaquid"><input type="radio" name="optradio">Pemaquid</label>
+        <label class="radio-inline" id="samoset"><input type="radio" name="optradio">Samoset</label>
+        <label class="radio-inline" id="squanto"><input type="radio" name="optradio">Squanto</label>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div class="row">
+      <h3 class="questions">What was the name of the ship on which the pilgrims came over? </div>
+      </h3>
+      <form id="ship">
+        <div class="radio">
+          <label class="radio-inline" id="nina"><input type="radio" name="optradio">Nina</label>
+          <label class="radio-inline" id="pinta"><input type="radio" name="optradio">Pinta</label>
+          <label class="radio-inline" id="mayflower"><input type="radio" name="optradio">Mayflower</label>
+          <label class="radio-inline" id="carnival"><input type="radio" name="optradio">Carnival Sensation</label>
+        </div>
+      </form>
+      <br>
+      <br>
+      <div class="row">
+        <h3 class="questions">How many turkeys are consumed each year on Thanksgiving? </div>
+        </h3>
+        <form id="turkeys">
+          <div class="radio">
+            <label class="radio-inline" id="eightMil"><input type="radio" name="optradio">8 million</label>
+            <label class="radio-inline" id="fifteenMil"><input type="radio" name="optradio">15 million</label>
+            <label class="radio-inline" id="thirtyThreeMil"><input type="radio" name="optradio">33 million</label>
+            <label class="radio-inline" id="fortySixMil"><input type="radio" name="optradio">46 million</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="container">
+        <h1 class="gameOver text-center">Game Over!</h1>
+        <img id="eatHam" src="assets/images/eatHam.png">
+        <h2 class="results text-center">Correct Answers: <span id="correct"></span></h2>
+        <h2 class="results text-center">Incorrect Answers: <span id="incorrect"></span></h2>
+        <h2 class="results text-center">Unanswered Questions: <span id="unanswered"></span></h2>
+      </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  </body>
+  </html>
