@@ -31,3 +31,10 @@ body {
 	font-family: 'Miltonian', cursive;
 }
 
+#page2 {
+	display: none;
+}
+
+#page3{
+	display: none;
+}

@@ -1,14 +1,22 @@
     $(document).ready(function() {
 
       $("#start").click(function() {
+        $("#page1").hide();
+        $("#page2").show();
+      });
 
-        $(".container").hide();
+        $("#page2").hide();
+        $("#page3").hide();
 
-      var correctAns: 0;
-      var incorrectAns: 0;
-      var unansweredQs: 0;
-      var rightAnswer: false;
-      var wrongAnswer: false;
+        //create 'done' button for when the user is done with the quiz
+        //on click 'done' buutton:
+        //.hide() page2 and .show() page3
+
+      var correctAns = 0;
+      var incorrectAns = 0;
+      var unansweredQs = 0;
+      var rightAnswer = false;
+      var wrongAnswer = false;
 
 
 
@@ -32,6 +40,7 @@
 
         $('#display').html(converted);
       },
+      
       timeConverter: function(t){
         var minutes = Math.floor(t/60);
         var seconds = t - (minutes * 60);
