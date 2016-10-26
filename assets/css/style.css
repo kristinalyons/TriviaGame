@@ -31,10 +31,15 @@ body {
 	font-family: 'Miltonian', cursive;
 }
 
+#page1 {
+	border: 5px solid black;
+}
+
 #page2 {
 	display: none;
 }
 
 #page3{
 	display: none;
+	border: 5px solid black;
 }

@@ -11,6 +11,10 @@
         //create 'done' button for when the user is done with the quiz
         //on click 'done' buutton:
         //.hide() page2 and .show() page3
+        $("#done").click(function() {
+          $("#page2").hide();
+          $("#page3").show();
+        })
 
       var correctAns = 0;
       var incorrectAns = 0;
@@ -40,7 +44,7 @@
 
         $('#display').html(converted);
       },
-      
+
       timeConverter: function(t){
         var minutes = Math.floor(t/60);
         var seconds = t - (minutes * 60);
