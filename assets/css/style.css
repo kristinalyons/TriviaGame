@@ -7,13 +7,24 @@ body {
 	font-size: 60px;
 }
 
-.container {
-	background-color: white;
-	width: 900px;
-	padding-right: 100px;
-	padding-left: 100px;
-	border-left: 5px solid black;
-	border-right: 5px solid black;
+#display {
+	font-size: 30px;
+}
+
+#start {
+	background-color: #af2222;	
+	color: yellow;
+	font-family: 'Miltonian', cursive; 
+	padding-bottom: 20px;
+	border: 2px dotted black;
+}
+
+#done {
+	background-color: #af2222;	
+	color: yellow;
+	font-family: 'Miltonian', cursive; 
+	padding-bottom: 20px;
+	border: 2px dotted black;
 }
 
 .questions {
@@ -33,13 +44,39 @@ body {
 
 #page1 {
 	border: 5px solid black;
+	background-color: #E8B84E;
+	width: 900px;
+	margin-top: 300px;
+	padding-right: 100px;
+	padding-left: 100px;
+
 }
 
 #page2 {
 	display: none;
+	background-color: #e6e997;
+	width: 900px;
+	margin-top: 0px;
+	padding-right: 100px;
+	padding-left: 100px;
+	border: 5px solid black;
 }
 
-#page3{
-	display: none;
+#page3 {
+	background-color: #e6e997;
+	width: 900px;
+	margin-top: 0px;
+	padding-right: 100px;
+	padding-left: 100px;
 	border: 5px solid black;
+
+}
+
+#eatHam {
+	border: 5px solid black;
+	margin-left: 30px;
+}
+
+.gameOver {
+	font-family: 'Miltonian', cursive;
 }
